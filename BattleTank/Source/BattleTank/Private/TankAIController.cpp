@@ -1,8 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "TankAIController.h"
-#include "GameFramework/PlayerController.h"
+#include "BattleTank.h"
 #include "Tank.h"
+#include "TankAIController.h"
+#include "Engine/World.h"
 
 ATank* ATankAIController::GetAIControlledTank() const
 {
