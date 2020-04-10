@@ -30,6 +30,12 @@ void ATank::AimAt(FVector HitLocation)
 	TankAimingComponent->AimAt(HitLocation, LaunchSpeed);
 }
 
+void ATank::Fire()
+{
+	// TODO Add code to fire
+	UE_LOG(LogTemp, Warning, TEXT("Fired!"));
+}
+
 // Called when the game starts or when spawned
 void ATank::BeginPlay()
 {
