@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Engine/World.h"
 #include "GameFramework/PlayerController.h"
 #include "Tank.h"
 #include "TankPlayerController.generated.h" // Must be last include
@@ -25,7 +26,16 @@ public:
 	// Return an OUT Param OutHitLocation
 	bool GetSightRayHitLocation(FVector& OutHitLocation) const;
 
+	bool GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const;
+
 	// Inherited
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
+
+private:
+	UPROPERTY(EditAnywhere)
+	float CrossHairXLocation = 0.5f;
+
+	UPROPERTY(EditAnywhere)
+	float CrossHairYLocation = 0.39999f;
 };
