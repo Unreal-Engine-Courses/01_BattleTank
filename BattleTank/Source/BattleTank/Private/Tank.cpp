@@ -20,7 +20,7 @@ void ATank::SetBarrelReference(UStaticMeshComponent* BarrelToSet)
 // Aim the turrent at the the end location
 void ATank::AimAt(FVector HitLocation)
 {
-	TankAimingComponent->AimAt(HitLocation);	
+	TankAimingComponent->AimAt(HitLocation, LaunchSpeed);
 }
 
 // Called when the game starts or when spawned
