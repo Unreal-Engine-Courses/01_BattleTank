@@ -28,6 +28,8 @@ public:
 
 	bool GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const;
 
+	bool GetLookVectorHitLocation(FVector LookDirection, FVector& OutHitLocation) const;
+
 	// Inherited
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
@@ -38,4 +40,7 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	float CrossHairYLocation = 0.39999f;
+
+	UPROPERTY(EditAnywhere)
+	float LineTraceRange = 1000000.f;
 };
