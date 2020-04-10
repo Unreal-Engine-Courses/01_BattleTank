@@ -6,7 +6,8 @@
 #include "Engine/World.h"
 #include "GameFramework/PlayerController.h"
 #include "Tank.h"
-#include "TankPlayerController.generated.h" // Must be last include
+// Must be last include
+#include "TankPlayerController.generated.h" 
 
 /**
  * 
