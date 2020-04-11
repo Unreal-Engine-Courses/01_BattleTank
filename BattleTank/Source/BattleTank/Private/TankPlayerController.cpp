@@ -12,13 +12,14 @@ ATank* ATankPlayerController::GetControlledTank() const
 
 void ATankPlayerController::AimTowardsCrosshair()
 {
-	if (!GetControlledTank()) { return; }
-	
-	FVector HitLocation; // Out parameter
-	if (GetSightRayHitLocation(HitLocation))
+	ATank* PlayerTank = Cast<ATank>(GetPawn());
+	if (PlayerTank)
 	{
-		// TODO - Tell controlled to tank to aim at this point
-		GetControlledTank()->AimAt(HitLocation);
+		FVector HitLocation; // Out parameter
+		if (GetSightRayHitLocation(HitLocation))
+		{			
+			PlayerTank->AimAt(HitLocation);
+		}
 	}
 }
 
