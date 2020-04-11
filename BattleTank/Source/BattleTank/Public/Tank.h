@@ -9,6 +9,7 @@
 // Forward declarations
 class UTankAimingComponent;
 class UTankBarrel;
+class UTankTrack;
 class UTankTurret;
 class AProjectile;
 
@@ -31,6 +32,12 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category="Setup")
 	void SetTurretReference(UTankTurret* TurretToSet);
+
+	/*UFUNCTION(BlueprintCallable, Category = "Setup")
+	void SetLeftTrackReference(UTankTrack* TrackToSet);
+
+	UFUNCTION(BlueprintCallable, Category = "Setup")
+	void SetRightTrackReference(UTankTrack* TrackToSet);*/
 
 protected:
 	// Called when the game starts or when spawned
