@@ -76,16 +76,6 @@ bool ATankPlayerController::GetLookDirection(FVector2D ScreenLocation, FVector& 
 void ATankPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	auto ControlledTank = GetControlledTank();
-	if (!ControlledTank)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Possessed Tank not found."));
-	}
-	else {
-		UE_LOG(LogTemp, Warning, TEXT("Possessed Tank: %s"), *ControlledTank->GetName());
-	}
-	
 }
 
 void ATankPlayerController::Tick(float DeltaTime)

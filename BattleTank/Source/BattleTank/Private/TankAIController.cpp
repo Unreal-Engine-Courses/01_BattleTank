@@ -21,7 +21,7 @@ void ATankAIController::Tick(float DeltaTime)
 		if (PlayerPawn)
 		{
 			AIPawn->AimAt(PlayerPawn->GetActorLocation());
-			AIPawn->Fire();
+			//AIPawn->Fire();
 		}
 		else {
 			UE_LOG(LogTemp, Warning, TEXT("No AI controlled tank found."));

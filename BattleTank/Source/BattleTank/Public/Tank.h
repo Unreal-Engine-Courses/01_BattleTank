@@ -9,6 +9,7 @@
 // Forward declarations
 class UTankAimingComponent;
 class UTankBarrel;
+class UTankMovementComponent;
 class UTankTrack;
 class UTankTurret;
 class AProjectile;
@@ -43,7 +44,10 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UTankAimingComponent* TankAimingComponent = nullptr;	
+	UTankAimingComponent* TankAimingComponent = nullptr;
+	
+	UPROPERTY(BlueprintReadOnly, Category="Setup")
+	UTankMovementComponent* TankMovementComponent = nullptr;
 
 private:
 	// Called to bind functionality to input
