@@ -20,6 +20,8 @@ void ATankAIController::Tick(float DeltaTime)
 		ATank* PlayerPawn = Cast<ATank>(GetWorld()->GetFirstPlayerController()->GetPawn());
 		if (PlayerPawn)
 		{
+			MoveToActor(PlayerPawn, AcceptanceRadius);
+
 			AIPawn->AimAt(PlayerPawn->GetActorLocation());
 			//AIPawn->Fire();
 		}
